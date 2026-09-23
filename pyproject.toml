@@ -1,0 +1,10 @@
+[project]
+name = "jev-coherence-bench"
+version = "0.1.0"
+description = "A benchmark that puts a committed-state coherence read against Jev, the typed verifier, on agent runs."
+requires-python = ">=3.10"
+license = {text = "MIT"}
+dependencies = []
+
+[tool.setuptools]
+py-modules = ["capture_run", "run_adapter", "source_b", "rung3_spec", "rung6_spec", "verifiers", "jev_typesafe", "util", "bench_rung6"]
