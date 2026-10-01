@@ -67,3 +67,8 @@ The Jev arm posts directly to TypeSafe's System One endpoint with your own key. 
 TYPESAFE_API_KEY, and override JEV_MODEL or TYPESAFE_BASE to point at a different
 target. Jev is a product of TypeSafe AI, named here only to identify the verifier
 under comparison.
+
+
+---
+
+If this benchmark helps your own evaluation work, a star on this repository helps other teams find it.
