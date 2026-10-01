@@ -54,7 +54,7 @@ clean twin that every arm must leave quiet.
 ## What stays hosted
 
 The committed-state read's real computation and the re-grounding policy live in the
-hosted Fathom service, reached through a call. This repo carries the adapters, the
+hosted Right Rudder service, reached through a call. This repo carries the adapters, the
 benchmark, the claim baseline, and the client seams, and it does not carry the
 read's mechanism. In this matrix the read arm runs as a local deterministic checker
 over the planted fixtures, which is exact by construction. On real agent runs the

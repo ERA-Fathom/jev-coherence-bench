@@ -119,16 +119,16 @@ class HostedRead:
     that accepts an expected set and a record and returns gaps. This class
     posts an expected set and a record, so aiming it at /v1/read would send a
     mismatched contract and error. Wait for the expected-set completeness
-    endpoint rather than pointing FATHOM_READ_URL at the op-stream route.
+    endpoint rather than pointing RIGHT_RUDDER_READ_URL at the op-stream route.
     """
 
     name = "committed_state_read"
     source = "hosted"
 
-    def __init__(self, url_env: str = "FATHOM_READ_URL",
-                 key_env: str = "FATHOM_READ_API_KEY", timeout: float = 60.0):
-        self.url = os.environ.get(url_env, "")
-        self.key = os.environ.get(key_env, "")
+    def __init__(self, url_env: str = "RIGHT_RUDDER_READ_URL",
+                 key_env: str = "RIGHT_RUDDER_READ_API_KEY", timeout: float = 60.0):
+        self.url = os.environ.get(url_env) or os.environ.get(url_env.replace("RIGHT_RUDDER_", "FATHOM_"), "")
+        self.key = os.environ.get(key_env) or os.environ.get(key_env.replace("RIGHT_RUDDER_", "FATHOM_"), "")
         self.url_env, self.key_env = url_env, key_env
         self.timeout = timeout
 
